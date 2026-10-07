@@ -1,9 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { UserService } from '../user/user.service.js';
 
+/**
+ * AuthService
+ * Nə üçün lazımdır: İstifadəçi girişi (login) zamanı verilənlər bazasında yoxlama
+ * aparmaq və autentifikasiya (təsdiqləmə) prosesini idarə etmək üçün.
+ */
 @Injectable()
 export class AuthService {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: UserService) { }
 
   login(email: string) {
     const users = this.userService.findAll();

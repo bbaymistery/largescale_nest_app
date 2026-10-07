@@ -1,5 +1,9 @@
 import { Injectable } from '@nestjs/common';
-
+/*
+CommentService
+Nə üçün lazımdır: Şərhlərlə (Comment) əlaqəli biznes məntiqini emal etmək üçün nəzərdə tutulub.
+`CommentController` bu servisin metodlarından istifadə edərək şərhləri tapır və qaytarır.
+*/
 @Injectable()
 export class CommentService {
   private comments = [
